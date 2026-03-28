@@ -1,26 +1,99 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-surface: #0e131f;
+  --color-surface-dim: #0e131f;
+  --color-surface-bright: #343947;
+  --color-surface-container: #1a1f2c;
+  --color-surface-container-low: #161b28;
+  --color-surface-container-high: #252a37;
+  --color-surface-container-highest: #303542;
+  --color-surface-container-lowest: #090e1a;
+  --color-surface-variant: #303542;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: #c6c0ff;
+  --color-primary-container: #8b80ff;
+  --color-on-primary: #2700a1;
+  --color-on-surface: #dee2f4;
+  --color-on-surface-variant: #c8c4d6;
+
+  --color-secondary: #7bd0ff;
+  --color-on-secondary: #00354a;
+  --color-secondary-container: #00a6e0;
+
+  --color-tertiary: #48deab;
+  --color-on-tertiary: #003827;
+  --color-tertiary-container: #00a579;
+
+  --color-outline: #928fa0;
+  --color-outline-variant: #474554;
+
+  --color-inverse-surface: #dee2f4;
+  --color-inverse-on-surface: #2b303e;
+  --color-inverse-primary: #5748d0;
+
+  --color-error: #ffb4ab;
+
+  --font-headline: "Cabinet Grotesk", sans-serif;
+  --font-body: "Satoshi", sans-serif;
+
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #090e1a;
+  color: #dee2f4;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+.cabinet {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.glass {
+  background: rgba(48, 53, 66, 0.4);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bento-card {
+  transition: all 0.4s var(--ease-smooth);
+}
+.bento-card:hover {
+  transform: translateY(-4px);
+  background-color: #252a37;
+}
+
+.dot-grid {
+  background-image: radial-gradient(rgba(198, 192, 255, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.aurora-blob {
+  filter: blur(120px);
+  pointer-events: none;
+  position: fixed;
+  z-index: -1;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090e1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #303542;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c6c0ff;
+}
+
+::selection {
+  background: rgba(198, 192, 255, 0.3);
+  color: #c6c0ff;
 }
