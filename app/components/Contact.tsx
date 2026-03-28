@@ -28,15 +28,14 @@ function GithubIcon({ className }: { className?: string }) {
 }
 
 const socials = [
-  { icon: TwitterIcon, href: "#", label: "Twitter" },
-  { icon: LinkedinIcon, href: "#", label: "LinkedIn" },
-  { icon: GithubIcon, href: "#", label: "GitHub" },
+  { icon: LinkedinIcon, href: "https://www.linkedin.com/in/diegosoto1005/", label: "LinkedIn" },
+  { icon: GithubIcon, href: "https://github.com/Diego2005z", label: "GitHub" },
 ];
 
 export default function Contact() {
   return (
-    <section id="contacto" className="py-24 lg:py-32 px-6 lg:px-8 max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-[48%_52%] gap-12 lg:gap-20">
+    <section id="contacto" className="py-24 lg:py-32 px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
         {/* Left */}
         <FadeIn className="space-y-12">
           <div>
@@ -59,7 +58,7 @@ export default function Contact() {
                   Email
                 </div>
                 <div className="text-lg font-bold text-white">
-                  diego.soto@email.com
+                  diegosotoquispe9876@gmail.com
                 </div>
               </div>
             </div>
@@ -73,7 +72,7 @@ export default function Contact() {
                   WhatsApp
                 </div>
                 <div className="text-lg font-bold text-white">
-                  +51 987 654 321
+                  +51 933 214 920
                 </div>
               </div>
             </div>

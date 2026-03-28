@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, Code, Brain, Star } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -51,7 +52,7 @@ export default function Hero() {
               <ArrowUpRight className="w-4 h-4" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/diegosoto1005/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-surface-container-high text-on-surface px-8 py-4 rounded-xl font-bold border border-outline-variant/20 hover:bg-surface-variant transition-colors"
@@ -87,8 +88,15 @@ export default function Hero() {
             <div className="absolute inset-8 border border-secondary/20 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
 
             {/* Avatar circle */}
-            <div className="w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 bg-gradient-to-br from-indigo-500 to-purple-700 rounded-full flex items-center justify-center text-7xl md:text-8xl cabinet text-white shadow-[0_0_60px_rgba(99,102,241,0.3)]">
-              D
+            <div className="w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden shadow-[0_0_60px_rgba(99,102,241,0.3)] ring-4 ring-indigo-500/30">
+              <Image
+                src="/images/diego-soto.png"
+                alt="Diego Soto"
+                width={288}
+                height={288}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
 
             {/* Floating cards */}
